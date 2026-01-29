@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ Школа Кибергигиены - Тест</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🛡️ Школа Кибергигиены</h1>
+            <p>Защита от фишинга и мошенничества</p>
+        </header>
+
+        <!-- Страница ФИО -->
+        <section id="name-page" class="page active">
+            <div class="form-group">
+                <label for="userName">ФИО студента:</label>
+                <input type="text" id="userName" placeholder="Иванов И.И." required>
+            </div>
+            <button class="btn-primary" onclick="QuizApp.start()">Начать тест</button>
+        </section>
+
+        <!-- Контейнер вопросов -->
+        <section id="quiz-container" class="page"></section>
+
+        <!-- Результаты -->
+        <section id="results-page" class="page">
+            <div class="results">
+                <h2>✅ Тест завершен!</h2>
+                <div class="score" id="finalScore">0/10</div>
+                <div class="progress">
+                    <div class="progress-bar" id="finalProgress"></div>
+                </div>
+                <div class="results-list" id="resultsList"></div>
+                <button class="btn-primary" onclick="QuizApp.reset()">Новый тест</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/quiz.js"></script>
+    <script src="scripts/data.js"></script>
+</body>
+</html>
